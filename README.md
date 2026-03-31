@@ -2,7 +2,7 @@
 2.  запуск 
 npm install
 npm start
-3. открыть http://localhost:3000
+3. открыть http://localhost:8000
 4. если ошибка
 обновите npm и Node.js:
 обновите npm глобально:
