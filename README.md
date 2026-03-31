@@ -6,7 +6,8 @@ npm start
 4. если ошибка
 обновите npm и Node.js:
 обновите npm глобально:
-npm install -g npm@latest
+  npm install -g npm@latest
 ПРАВА ДОСТУПА 
-Set-ExecutionPolicy -Scope CurrentUser 
-дальше пишем Unrestricted 
+  Set-ExecutionPolicy -Scope CurrentUser 
+дальше пишем
+   Unrestricted 
