@@ -1,0 +1,24 @@
+{
+  "name": "freshmart-information-system",
+  "version": "1.0.0",
+  "description": "Учебная информационная система супермаркета FreshMart",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server.js",
+    "dev": "nodemon --exec \"node --disable-warning=ExperimentalWarning\" server.js",
+    "seed": "node --disable-warning=ExperimentalWarning db/seed.js"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

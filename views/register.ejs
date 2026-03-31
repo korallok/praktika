@@ -1,0 +1,64 @@
+<%- include("partials/head", { title }) %>
+  <body class="auth-body">
+    <main class="auth-layout">
+      <section class="auth-promo">
+        <div class="auth-promo-content">
+          <span class="eyebrow">FreshMart</span>
+          <h1>Регистрация пользователя</h1>
+          <p>
+            Создайте учётную запись, чтобы работать с товарами, продажами и отчётами
+            внутри защищённой системы.
+          </p>
+          <ul class="feature-list">
+            <li>Безопасное хранение паролей в виде хэша</li>
+            <li>Защищённые страницы после входа</li>
+            <li>Удобная работа через единый интерфейс</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="auth-card-wrap">
+        <div class="auth-card">
+          <div class="auth-card-header">
+            <h2>Регистрация</h2>
+            <p>Создайте нового пользователя системы.</p>
+          </div>
+
+          <div id="globalAlert" class="alert-container"></div>
+
+          <form id="authForm" class="form-grid" data-auth-form="register">
+            <label class="form-field">
+              <span>Логин</span>
+              <input type="text" name="username" placeholder="Например, manager" required />
+            </label>
+
+            <label class="form-field">
+              <span>Пароль</span>
+              <input type="password" name="password" placeholder="Минимум 6 символов" required />
+            </label>
+
+            <label class="form-field">
+              <span>Повтор пароля</span>
+              <input
+                type="password"
+                name="passwordConfirm"
+                placeholder="Повторите пароль"
+                required
+              />
+            </label>
+
+            <button class="primary-button" type="submit">Зарегистрироваться</button>
+          </form>
+
+          <p class="auth-footer-text">
+            Уже есть аккаунт?
+            <a href="/login">Войти</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/auth.js"></script>
+  </body>
+</html>

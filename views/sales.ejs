@@ -1,0 +1,56 @@
+<%- include("partials/head", { title }) %>
+  <body>
+    <div class="app-shell">
+      <%- include("partials/sidebar", { currentPath, currentUser }) %>
+
+      <main class="main-content">
+        <%- include("partials/topbar", { title, currentUser }) %>
+
+        <section class="content-grid wide">
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Создание продажи</h3>
+              <button id="addSaleItemButton" class="secondary-button" type="button">
+                Добавить позицию
+              </button>
+            </div>
+
+            <form id="saleForm" class="form-grid">
+              <div id="saleItemsContainer" class="sale-items"></div>
+
+              <div class="summary-box">
+                <span>Предварительная сумма</span>
+                <strong id="saleTotalPreview">0 ₽</strong>
+              </div>
+
+              <button class="primary-button" type="submit">Сохранить продажу</button>
+            </form>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h3>История продаж</h3>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Дата</th>
+                    <th>Сотрудник</th>
+                    <th>Позиции</th>
+                    <th>Сумма</th>
+                  </tr>
+                </thead>
+                <tbody id="salesTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/sales.js"></script>
+  </body>
+</html>

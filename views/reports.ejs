@@ -1,0 +1,69 @@
+<%- include("partials/head", { title }) %>
+  <body>
+    <div class="app-shell">
+      <%- include("partials/sidebar", { currentPath, currentUser }) %>
+
+      <main class="main-content">
+        <%- include("partials/topbar", { title, currentUser }) %>
+
+        <section class="stats-grid reports-grid">
+          <article class="stat-card">
+            <span>Общее количество продаж</span>
+            <strong id="reportsTotalSalesCount">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Общая сумма продаж</span>
+            <strong id="reportsTotalRevenue">0 ₽</strong>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Популярные товары</h3>
+              <span class="muted-text">Топ по количеству проданных единиц</span>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Товар</th>
+                    <th>Категория</th>
+                    <th>Продано</th>
+                    <th>Выручка</th>
+                  </tr>
+                </thead>
+                <tbody id="topProductsTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Текущие остатки</h3>
+              <span class="muted-text">Актуальные данные по складу</span>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Товар</th>
+                    <th>Категория</th>
+                    <th>Цена</th>
+                    <th>Остаток</th>
+                  </tr>
+                </thead>
+                <tbody id="stockTableBody"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/reports.js"></script>
+  </body>
+</html>

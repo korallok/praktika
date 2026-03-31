@@ -1,0 +1,32 @@
+<aside class="sidebar">
+  <div class="brand-block">
+    <span class="brand-mark">FM</span>
+    <div>
+      <div class="brand-name">FreshMart</div>
+      <div class="brand-subtitle">Учебная ИС супермаркета</div>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="nav-link <%= currentPath === '/dashboard' ? 'active' : '' %>" href="/dashboard">
+      Панель управления
+    </a>
+    <a class="nav-link <%= currentPath === '/products' ? 'active' : '' %>" href="/products">
+      Товары
+    </a>
+    <a class="nav-link <%= currentPath === '/sales' ? 'active' : '' %>" href="/sales">
+      Продажи
+    </a>
+    <a class="nav-link <%= currentPath === '/reports' ? 'active' : '' %>" href="/reports">
+      Отчёты
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="user-chip">
+      <span class="user-chip-label">Пользователь</span>
+      <strong><%= currentUser.username %></strong>
+    </div>
+    <button class="ghost-button full-width" type="button" data-action="logout">Выйти</button>
+  </div>
+</aside>

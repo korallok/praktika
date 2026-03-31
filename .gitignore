@@ -1,0 +1,4 @@
+node_modules/
+db/freshmart.sqlite
+.env
+npm-debug.log*

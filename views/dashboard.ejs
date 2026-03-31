@@ -1,0 +1,66 @@
+<%- include("partials/head", { title }) %>
+  <body>
+    <div class="app-shell">
+      <%- include("partials/sidebar", { currentPath, currentUser }) %>
+
+      <main class="main-content">
+        <%- include("partials/topbar", { title, currentUser }) %>
+
+        <section class="hero-card">
+          <div>
+            <p class="eyebrow">Что решает система</p>
+            <h2>Контроль остатков и продажи без ручных таблиц</h2>
+            <p>
+              FreshMart автоматизирует учёт товаров и фиксирует продажи с аналитикой,
+              чтобы менеджеру было проще принимать решения.
+            </p>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-button" href="/sales">Оформить продажу</a>
+            <a class="secondary-button" href="/products">Открыть товары</a>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <span>Всего продаж</span>
+            <strong id="totalSalesCount">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Сумма продаж</span>
+            <strong id="totalRevenue">0 ₽</strong>
+          </article>
+          <article class="stat-card">
+            <span>Товаров в каталоге</span>
+            <strong id="productsCount">0</strong>
+          </article>
+          <article class="stat-card">
+            <span>Низкий остаток</span>
+            <strong id="lowStockCount">0</strong>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Популярные товары</h3>
+              <a href="/reports">Смотреть отчёты</a>
+            </div>
+            <div id="dashboardTopProducts" class="simple-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-header">
+              <h3>Текущие остатки</h3>
+              <a href="/products">К товарам</a>
+            </div>
+            <div id="dashboardStock" class="simple-list"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/dashboard.js"></script>
+  </body>
+</html>
